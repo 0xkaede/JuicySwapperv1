@@ -1,5 +1,5 @@
 # Juicy Swapper v1
-**Juicy Swapper v1* is a **Fortnite skin swapper** developed in **C#**.
+**Juicy Swapper v1** is a **Fortnite skin swapper** developed in **C#**.
 **Warning: This source code is heavily outdated and will not work on the latest Fortnite release.**
 
 ### Important
