@@ -1,0 +1,1779 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D8BCAAC-874B-4730-B1DC-A3147345B29B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JuicySwapper</RootNamespace>
+    <AssemblyName>Juicy Swapper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\build\Juicy Swapper\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\build\Juicy Swapper\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>test_92j_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>.\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Costura, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.4.1.0\lib\net40\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscordRPC">
+      <HintPath>.\DiscordRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\src\mitsuha\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main\GUI\MediaPlayerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\MediaPlayerMenu.Designer.cs">
+      <DependentUpon>MediaPlayerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\MediaPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\MediaPlayer.Designer.cs">
+      <DependentUpon>MediaPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\ItemShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\ItemShop.Designer.cs">
+      <DependentUpon>ItemShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\AutumnsMantle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\AutumnsMantle.designer.cs">
+      <DependentUpon>AutumnsMantle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\BackupPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\BackupPlan.designer.cs">
+      <DependentUpon>BackupPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\BattleShroud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\BattleShroud.designer.cs">
+      <DependentUpon>BattleShroud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\BlackShield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\BlackShield.designer.cs">
+      <DependentUpon>BlackShield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\CovenCape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\CovenCape.designer.cs">
+      <DependentUpon>CovenCape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\CrestedCape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\CrestedCape.designer.cs">
+      <DependentUpon>CrestedCape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\CuddleBow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\CuddleBow.designer.cs">
+      <DependentUpon>CuddleBow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\Dismal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\Dismal.designer.cs">
+      <DependentUpon>Dismal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\EnduringCape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\EnduringCape.designer.cs">
+      <DependentUpon>EnduringCape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\LoveWings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\LoveWings.designer.cs">
+      <DependentUpon>LoveWings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\RainbowClover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\RainbowClover.designer.cs">
+      <DependentUpon>RainbowClover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\DiscoBall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\DiscoBall.designer.cs">
+      <DependentUpon>DiscoBall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\FallenWings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\FallenWings.designer.cs">
+      <DependentUpon>FallenWings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\FireVortex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\FireVortex.designer.cs">
+      <DependentUpon>FireVortex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\FlameSigil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\FlameSigil.designer.cs">
+      <DependentUpon>FlameSigil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GalacticDisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GalacticDisc.designer.cs">
+      <DependentUpon>GalacticDisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GalaxyWings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GalaxyWings.designer.cs">
+      <DependentUpon>GalaxyWings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GhostPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GhostPortal.designer.cs">
+      <DependentUpon>GhostPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GlimmeringCloak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GlimmeringCloak.designer.cs">
+      <DependentUpon>GlimmeringCloak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\IllusionRune.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\IllusionRune.designer.cs">
+      <DependentUpon>IllusionRune.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\Insignia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\Insignia.designer.cs">
+      <DependentUpon>Insignia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\RoyaleShield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\RoyaleShield.designer.cs">
+      <DependentUpon>RoyaleShield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\Scaly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\Scaly.Designer.cs">
+      <DependentUpon>Scaly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\SixString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\SixString.designer.cs">
+      <DependentUpon>SixString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\SpectralSpine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\SpectralSpine.designer.cs">
+      <DependentUpon>SpectralSpine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\Stitches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\Stitches.designer.cs">
+      <DependentUpon>Stitches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\VenturionCape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\VenturionCape.designer.cs">
+      <DependentUpon>VenturionCape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\Wolfpack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\Wolfpack.designer.cs">
+      <DependentUpon>Wolfpack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Fishin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Fishin.designer.cs">
+      <DependentUpon>Fishin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\CheerUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\CheerUp.designer.cs">
+      <DependentUpon>CheerUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\BhangraBoogie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\BhangraBoogie.designer.cs">
+      <DependentUpon>BhangraBoogie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\ButterflyKnife.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\ButterflyKnife.designer.cs">
+      <DependentUpon>ButterflyKnife.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\OutWest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\OutWest.designer.cs">
+      <DependentUpon>OutWest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\BuckleUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\BuckleUp.designer.cs">
+      <DependentUpon>BuckleUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\TheRenegade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\TheRenegade.designer.cs">
+      <DependentUpon>TheRenegade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\OrangeJustice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\OrangeJustice.designer.cs">
+      <DependentUpon>OrangeJustice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\PopLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\PopLock.designer.cs">
+      <DependentUpon>PopLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Fresh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Fresh.designer.cs">
+      <DependentUpon>Fresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Freestylin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Freestylin.designer.cs">
+      <DependentUpon>Freestylin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\SmoothMoves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\SmoothMoves.designer.cs">
+      <DependentUpon>SmoothMoves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\ToosieSlide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\ToosieSlide.designer.cs">
+      <DependentUpon>ToosieSlide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\TheWorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\TheWorm.designer.cs">
+      <DependentUpon>TheWorm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Misc\JuicyEAC2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Misc\JuicyEAC2.Designer.cs">
+      <DependentUpon>JuicyEAC2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Misc\JuicyEAC1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Misc\JuicyEAC1.Designer.cs">
+      <DependentUpon>JuicyEAC1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Misc\SuperOGMusic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Misc\SuperOGMusic.Designer.cs">
+      <DependentUpon>SuperOGMusic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Misc\ToosieMusic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Misc\ToosieMusic.Designer.cs">
+      <DependentUpon>ToosieMusic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Misc\ScenarioMusic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Misc\ScenarioMusic.Designer.cs">
+      <DependentUpon>ScenarioMusic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Daydream.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Daydream.designer.cs">
+      <DependentUpon>Daydream.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Flapper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Flapper.designer.cs">
+      <DependentUpon>Flapper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Floss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Floss.designer.cs">
+      <DependentUpon>Floss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Levitate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Levitate.designer.cs">
+      <DependentUpon>Levitate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Glowsticks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Glowsticks.designer.cs">
+      <DependentUpon>Glowsticks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Infectious.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Infectious.designer.cs">
+      <DependentUpon>Infectious.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Llamacadabra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Llamacadabra.designer.cs">
+      <DependentUpon>Llamacadabra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\LazerBlast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\LazerBlast.designer.cs">
+      <DependentUpon>LazerBlast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\NeverGonna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\NeverGonna.designer.cs">
+      <DependentUpon>NeverGonna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Poki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Poki.designer.cs">
+      <DependentUpon>Poki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\PonyUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\PonyUp.designer.cs">
+      <DependentUpon>PonyUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Scenario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Scenario.designer.cs">
+      <DependentUpon>Scenario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Slick.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Slick.designer.cs">
+      <DependentUpon>Slick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\TakeTheL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\TakeTheL.designer.cs">
+      <DependentUpon>TakeTheL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\IceBreaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\IceBreaker.Designer.cs">
+      <DependentUpon>IceBreaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\TrustyNo2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\TrustyNo2.Designer.cs">
+      <DependentUpon>TrustyNo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Bootstraps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Bootstraps.Designer.cs">
+      <DependentUpon>Bootstraps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\AxeOfChampions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\AxeOfChampions.Designer.cs">
+      <DependentUpon>AxeOfChampions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Driver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Driver.Designer.cs">
+      <DependentUpon>Driver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Vision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Vision.Designer.cs">
+      <DependentUpon>Vision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\WidowsBite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\WidowsBite.Designer.cs">
+      <DependentUpon>WidowsBite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Crowbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Crowbar.Designer.cs">
+      <DependentUpon>Crowbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Spiky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Spiky.Designer.cs">
+      <DependentUpon>Spiky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\PinkFlamingo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\PinkFlamingo.Designer.cs">
+      <DependentUpon>PinkFlamingo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\HarleyHitter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\HarleyHitter.Designer.cs">
+      <DependentUpon>HarleyHitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\StuddedAxe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\StuddedAxe.Designer.cs">
+      <DependentUpon>StuddedAxe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\OGDefault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\OGDefault.Designer.cs">
+      <DependentUpon>OGDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\CandyAxe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\CandyAxe.Designer.cs">
+      <DependentUpon>CandyAxe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\StellarAxe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\StellarAxe.Designer.cs">
+      <DependentUpon>StellarAxe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Reaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\Reaper.Designer.cs">
+      <DependentUpon>Reaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\PartyAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\PartyAnimal.Designer.cs">
+      <DependentUpon>PartyAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\StarWand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\StarWand.Designer.cs">
+      <DependentUpon>StarWand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\DualRaiders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\DualRaiders.Designer.cs">
+      <DependentUpon>DualRaiders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\MerryMintAxe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\MerryMintAxe.Designer.cs">
+      <DependentUpon>MerryMintAxe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\RaidersRevenge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\RaidersRevenge.Designer.cs">
+      <DependentUpon>RaidersRevenge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\ACDC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Pickaxes\ACDC.Designer.cs">
+      <DependentUpon>ACDC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Questions\SkullTrooperOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Questions\SkullTrooperOption.Designer.cs">
+      <DependentUpon>SkullTrooperOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Questions\GalaxyOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Questions\GalaxyOption.Designer.cs">
+      <DependentUpon>GalaxyOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Breakpoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Breakpoint.Designer.cs">
+      <DependentUpon>Breakpoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\PsychoBandit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\PsychoBandit.designer.cs">
+      <DependentUpon>PsychoBandit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\NogOps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\NogOps.Designer.cs">
+      <DependentUpon>NogOps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\ReconSpecialist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\ReconSpecialist.Designer.cs">
+      <DependentUpon>ReconSpecialist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Siren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Siren.Designer.cs">
+      <DependentUpon>Siren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\AstroJack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\AstroJack.Designer.cs">
+      <DependentUpon>AstroJack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\CloakedShadow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\CloakedShadow.Designer.cs">
+      <DependentUpon>CloakedShadow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Dynamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Dynamo.designer.cs">
+      <DependentUpon>Dynamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\ChaosAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\ChaosAgent.designer.cs">
+      <DependentUpon>ChaosAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Fate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Fate.Designer.cs">
+      <DependentUpon>Fate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BrilliantStriker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BrilliantStriker.Designer.cs">
+      <DependentUpon>BrilliantStriker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BeachBomber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BeachBomber.Designer.cs">
+      <DependentUpon>BeachBomber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\GingerGunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\GingerGunner.Designer.cs">
+      <DependentUpon>GingerGunner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Maven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Maven.Designer.cs">
+      <DependentUpon>Maven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\TropicalPunchZoey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\TropicalPunchZoey.Designer.cs">
+      <DependentUpon>TropicalPunchZoey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Plague.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Plague.Designer.cs">
+      <DependentUpon>Plague.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\SkullTrooper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\SkullTrooper.Designer.cs">
+      <DependentUpon>SkullTrooper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Velocity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Velocity.Designer.cs">
+      <DependentUpon>Velocity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Havoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Havoc.Designer.cs">
+      <DependentUpon>Havoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\DreamGalaxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\DreamGalaxy.designer.cs">
+      <DependentUpon>DreamGalaxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Galaxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Galaxy.designer.cs">
+      <DependentUpon>Galaxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BunnyBrawler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BunnyBrawler.Designer.cs">
+      <DependentUpon>BunnyBrawler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BriteBomber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BriteBomber.Designer.cs">
+      <DependentUpon>BriteBomber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Crusher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Crusher.Designer.cs">
+      <DependentUpon>Crusher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Domino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Domino.Designer.cs">
+      <DependentUpon>Domino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Kyra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Kyra.designer.cs">
+      <DependentUpon>Kyra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterCHN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterCHN.Designer.cs">
+      <DependentUpon>MogulMasterCHN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterKOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterKOR.Designer.cs">
+      <DependentUpon>MogulMasterKOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterGER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterGER.Designer.cs">
+      <DependentUpon>MogulMasterGER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterFRA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterFRA.Designer.cs">
+      <DependentUpon>MogulMasterFRA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterGBR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterGBR.Designer.cs">
+      <DependentUpon>MogulMasterGBR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterCAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterCAN.Designer.cs">
+      <DependentUpon>MogulMasterCAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMaster.Designer.cs">
+      <DependentUpon>MogulMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterUSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\MogulMasterUSA.Designer.cs">
+      <DependentUpon>MogulMasterUSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RenegadeRaiderCMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RenegadeRaiderCMat.Designer.cs">
+      <DependentUpon>RenegadeRaiderCMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RenegadeRaiderMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RenegadeRaiderMat.Designer.cs">
+      <DependentUpon>RenegadeRaiderMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\ScarletCommander.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\ScarletCommander.designer.cs">
+      <DependentUpon>ScarletCommander.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\TriceraOps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\TriceraOps.Designer.cs">
+      <DependentUpon>TriceraOps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\DarkVoyager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\DarkVoyager.Designer.cs">
+      <DependentUpon>DarkVoyager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Clash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Clash.Designer.cs">
+      <DependentUpon>Clash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\EliteAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\EliteAgent.designer.cs">
+      <DependentUpon>EliteAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Manic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Manic.Designer.cs">
+      <DependentUpon>Manic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\PoisedPlaymaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\PoisedPlaymaker.designer.cs">
+      <DependentUpon>PoisedPlaymaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RenegadeRaiderC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RenegadeRaiderC.Designer.cs">
+      <DependentUpon>RenegadeRaiderC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\ScarletDefender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\ScarletDefender.Designer.cs">
+      <DependentUpon>ScarletDefender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Inferno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Inferno.Designer.cs">
+      <DependentUpon>Inferno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Shadowbird.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Shadowbird.designer.cs">
+      <DependentUpon>Shadowbird.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\FinesseFinisher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\FinesseFinisher.designer.cs">
+      <DependentUpon>FinesseFinisher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Whiteout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Whiteout.designer.cs">
+      <DependentUpon>Whiteout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\WorldWarrior.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\WorldWarrior.Designer.cs">
+      <DependentUpon>WorldWarrior.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Drake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Drake.Designer.cs">
+      <DependentUpon>Drake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Zadie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Zadie.Designer.cs">
+      <DependentUpon>Zadie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Mezmer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Mezmer.Designer.cs">
+      <DependentUpon>Mezmer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Ikonik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Ikonik.Designer.cs">
+      <DependentUpon>Ikonik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\SparkleSpecialist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\SparkleSpecialist.Designer.cs">
+      <DependentUpon>SparkleSpecialist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Glow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Glow.Designer.cs">
+      <DependentUpon>Glow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\EmotesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\EmotesPanel.designer.cs">
+      <DependentUpon>EmotesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\EmoteWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\EmoteWarning.Designer.cs">
+      <DependentUpon>EmoteWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\AutumnQueen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\AutumnQueen.designer.cs">
+      <DependentUpon>AutumnQueen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Birdie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Birdie.designer.cs">
+      <DependentUpon>Birdie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Bolt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Bolt.designer.cs">
+      <DependentUpon>Bolt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Bracer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Bracer.designer.cs">
+      <DependentUpon>Bracer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\AerialAssault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\AerialAssault.designer.cs">
+      <DependentUpon>AerialAssault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Juicy.cs" />
+    <Compile Include="Classes\Researcher.cs" />
+    <Compile Include="Classes\Engine.cs" />
+    <Compile Include="Classes\Utilites.cs" />
+    <Compile Include="Main\GUI\BackupVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\BackupVerify.Designer.cs">
+      <DependentUpon>BackupVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Loader.Designer.cs">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\BypassWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\BypassWarning.Designer.cs">
+      <DependentUpon>BypassWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\PakError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\PakError.Designer.cs">
+      <DependentUpon>PakError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\DevMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\DevMode.Designer.cs">
+      <DependentUpon>DevMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\FortniteLaunch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\FortniteLaunch.Designer.cs">
+      <DependentUpon>FortniteLaunch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\ResetComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\ResetComplete.Designer.cs">
+      <DependentUpon>ResetComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\ResetConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\ResetConfirm.Designer.cs">
+      <DependentUpon>ResetConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\AdvancedSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\AdvancedSettings.Designer.cs">
+      <DependentUpon>AdvancedSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Doublecross.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Doublecross.designer.cs">
+      <DependentUpon>Doublecross.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Heidi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Heidi.designer.cs">
+      <DependentUpon>Heidi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Hush.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Hush.designer.cs">
+      <DependentUpon>Hush.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Wonder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Wonder.Designer.cs">
+      <DependentUpon>Wonder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\GhoulOG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\GhoulOG.Designer.cs">
+      <DependentUpon>GhoulOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BlackKnight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BlackKnight.Designer.cs">
+      <DependentUpon>BlackKnight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RedNosed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RedNosed.Designer.cs">
+      <DependentUpon>RedNosed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RenegadeRaider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RenegadeRaider.Designer.cs">
+      <DependentUpon>RenegadeRaider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\StealthReflex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\StealthReflex.designer.cs">
+      <DependentUpon>StealthReflex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\MiscPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\MiscPanel.Designer.cs">
+      <DependentUpon>MiscPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\DashPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\DashPanel.Designer.cs">
+      <DependentUpon>DashPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\BackblingsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\BackblingsPanel.Designer.cs">
+      <DependentUpon>BackblingsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\PickaxesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\PickaxesPanel.Designer.cs">
+      <DependentUpon>PickaxesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\SkinsPanelScroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\SkinsPanelScroll.Designer.cs">
+      <DependentUpon>SkinsPanelScroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\SkinsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\SkinsPanel.Designer.cs">
+      <DependentUpon>SkinsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main\Item Forms\Skins\Sparkplug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Sparkplug.Designer.cs">
+      <DependentUpon>Sparkplug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Ruby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Ruby.designer.cs">
+      <DependentUpon>Ruby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\SkullRanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\SkullRanger.designer.cs">
+      <DependentUpon>SkullRanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Punchy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Punchy.designer.cs">
+      <DependentUpon>Punchy.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main\GUI\MediaPlayerMenu.resx">
+      <DependentUpon>MediaPlayerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\MediaPlayer.resx">
+      <DependentUpon>MediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\ItemShop.resx">
+      <DependentUpon>ItemShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\AutumnsMantle.resx">
+      <DependentUpon>AutumnsMantle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\BackupPlan.resx">
+      <DependentUpon>BackupPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\BattleShroud.resx">
+      <DependentUpon>BattleShroud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\BlackShield.resx">
+      <DependentUpon>BlackShield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\CovenCape.resx">
+      <DependentUpon>CovenCape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\CrestedCape.resx">
+      <DependentUpon>CrestedCape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\CuddleBow.resx">
+      <DependentUpon>CuddleBow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\Dismal.resx">
+      <DependentUpon>Dismal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\EnduringCape.resx">
+      <DependentUpon>EnduringCape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\LoveWings.resx">
+      <DependentUpon>LoveWings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\RainbowClover.resx">
+      <DependentUpon>RainbowClover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\DiscoBall.resx">
+      <DependentUpon>DiscoBall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\FallenWings.resx">
+      <DependentUpon>FallenWings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\FireVortex.resx">
+      <DependentUpon>FireVortex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\FlameSigil.resx">
+      <DependentUpon>FlameSigil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\GalacticDisc.resx">
+      <DependentUpon>GalacticDisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\GalaxyWings.resx">
+      <DependentUpon>GalaxyWings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\GhostPortal.resx">
+      <DependentUpon>GhostPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\GlimmeringCloak.resx">
+      <DependentUpon>GlimmeringCloak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\IllusionRune.resx">
+      <DependentUpon>IllusionRune.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\Insignia.resx">
+      <DependentUpon>Insignia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\RoyaleShield.resx">
+      <DependentUpon>RoyaleShield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\Scaly.resx">
+      <DependentUpon>Scaly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\SixString.resx">
+      <DependentUpon>SixString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\SpectralSpine.resx">
+      <DependentUpon>SpectralSpine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\Stitches.resx">
+      <DependentUpon>Stitches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\VenturionCape.resx">
+      <DependentUpon>VenturionCape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\Wolfpack.resx">
+      <DependentUpon>Wolfpack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Fishin.resx">
+      <DependentUpon>Fishin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\CheerUp.resx">
+      <DependentUpon>CheerUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\BhangraBoogie.resx">
+      <DependentUpon>BhangraBoogie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\ButterflyKnife.resx">
+      <DependentUpon>ButterflyKnife.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\OutWest.resx">
+      <DependentUpon>OutWest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\BuckleUp.resx">
+      <DependentUpon>BuckleUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\TheRenegade.resx">
+      <DependentUpon>TheRenegade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\OrangeJustice.resx">
+      <DependentUpon>OrangeJustice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\PopLock.resx">
+      <DependentUpon>PopLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Fresh.resx">
+      <DependentUpon>Fresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Freestylin.resx">
+      <DependentUpon>Freestylin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\SmoothMoves.resx">
+      <DependentUpon>SmoothMoves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\ToosieSlide.resx">
+      <DependentUpon>ToosieSlide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\TheWorm.resx">
+      <DependentUpon>TheWorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Misc\JuicyEAC2.resx">
+      <DependentUpon>JuicyEAC2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Misc\JuicyEAC1.resx">
+      <DependentUpon>JuicyEAC1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Misc\SuperOGMusic.resx">
+      <DependentUpon>SuperOGMusic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Misc\ToosieMusic.resx">
+      <DependentUpon>ToosieMusic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Misc\ScenarioMusic.resx">
+      <DependentUpon>ScenarioMusic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Daydream.resx">
+      <DependentUpon>Daydream.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Flapper.resx">
+      <DependentUpon>Flapper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Floss.resx">
+      <DependentUpon>Floss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Levitate.resx">
+      <DependentUpon>Levitate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Glowsticks.resx">
+      <DependentUpon>Glowsticks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Infectious.resx">
+      <DependentUpon>Infectious.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Llamacadabra.resx">
+      <DependentUpon>Llamacadabra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\LazerBlast.resx">
+      <DependentUpon>LazerBlast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\NeverGonna.resx">
+      <DependentUpon>NeverGonna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Poki.resx">
+      <DependentUpon>Poki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\PonyUp.resx">
+      <DependentUpon>PonyUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Scenario.resx">
+      <DependentUpon>Scenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Slick.resx">
+      <DependentUpon>Slick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\TakeTheL.resx">
+      <DependentUpon>TakeTheL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\IceBreaker.resx">
+      <DependentUpon>IceBreaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\TrustyNo2.resx">
+      <DependentUpon>TrustyNo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\Bootstraps.resx">
+      <DependentUpon>Bootstraps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\AxeOfChampions.resx">
+      <DependentUpon>AxeOfChampions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\Driver.resx">
+      <DependentUpon>Driver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\Vision.resx">
+      <DependentUpon>Vision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\WidowsBite.resx">
+      <DependentUpon>WidowsBite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\Crowbar.resx">
+      <DependentUpon>Crowbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\Spiky.resx">
+      <DependentUpon>Spiky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\PinkFlamingo.resx">
+      <DependentUpon>PinkFlamingo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\HarleyHitter.resx">
+      <DependentUpon>HarleyHitter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\StuddedAxe.resx">
+      <DependentUpon>StuddedAxe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\OGDefault.resx">
+      <DependentUpon>OGDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\CandyAxe.resx">
+      <DependentUpon>CandyAxe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\StellarAxe.resx">
+      <DependentUpon>StellarAxe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\Reaper.resx">
+      <DependentUpon>Reaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\PartyAnimal.resx">
+      <DependentUpon>PartyAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\StarWand.resx">
+      <DependentUpon>StarWand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\DualRaiders.resx">
+      <DependentUpon>DualRaiders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\MerryMintAxe.resx">
+      <DependentUpon>MerryMintAxe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\RaidersRevenge.resx">
+      <DependentUpon>RaidersRevenge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Pickaxes\ACDC.resx">
+      <DependentUpon>ACDC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Questions\SkullTrooperOption.resx">
+      <DependentUpon>SkullTrooperOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Questions\GalaxyOption.resx">
+      <DependentUpon>GalaxyOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Breakpoint.resx">
+      <DependentUpon>Breakpoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\PsychoBandit.resx">
+      <DependentUpon>PsychoBandit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\NogOps.resx">
+      <DependentUpon>NogOps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\ReconSpecialist.resx">
+      <DependentUpon>ReconSpecialist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Siren.resx">
+      <DependentUpon>Siren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\AstroJack.resx">
+      <DependentUpon>AstroJack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\CloakedShadow.resx">
+      <DependentUpon>CloakedShadow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Dynamo.resx">
+      <DependentUpon>Dynamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\ChaosAgent.resx">
+      <DependentUpon>ChaosAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Fate.resx">
+      <DependentUpon>Fate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\BrilliantStriker.resx">
+      <DependentUpon>BrilliantStriker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\BeachBomber.resx">
+      <DependentUpon>BeachBomber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\GingerGunner.resx">
+      <DependentUpon>GingerGunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Maven.resx">
+      <DependentUpon>Maven.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\TropicalPunchZoey.resx">
+      <DependentUpon>TropicalPunchZoey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Plague.resx">
+      <DependentUpon>Plague.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\SkullTrooper.resx">
+      <DependentUpon>SkullTrooper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Velocity.resx">
+      <DependentUpon>Velocity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Havoc.resx">
+      <DependentUpon>Havoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\DreamGalaxy.resx">
+      <DependentUpon>DreamGalaxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Galaxy.resx">
+      <DependentUpon>Galaxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\BunnyBrawler.resx">
+      <DependentUpon>BunnyBrawler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\BriteBomber.resx">
+      <DependentUpon>BriteBomber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Crusher.resx">
+      <DependentUpon>Crusher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Domino.resx">
+      <DependentUpon>Domino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Kyra.resx">
+      <DependentUpon>Kyra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\MogulMasterCHN.resx">
+      <DependentUpon>MogulMasterCHN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\MogulMasterKOR.resx">
+      <DependentUpon>MogulMasterKOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\MogulMasterGER.resx">
+      <DependentUpon>MogulMasterGER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\MogulMasterFRA.resx">
+      <DependentUpon>MogulMasterFRA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\MogulMasterGBR.resx">
+      <DependentUpon>MogulMasterGBR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\MogulMasterCAN.resx">
+      <DependentUpon>MogulMasterCAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\MogulMaster.resx">
+      <DependentUpon>MogulMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\MogulMasterUSA.resx">
+      <DependentUpon>MogulMasterUSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\RenegadeRaiderCMat.resx">
+      <DependentUpon>RenegadeRaiderCMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\RenegadeRaiderMat.resx">
+      <DependentUpon>RenegadeRaiderMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\ScarletCommander.resx">
+      <DependentUpon>ScarletCommander.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\TriceraOps.resx">
+      <DependentUpon>TriceraOps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\DarkVoyager.resx">
+      <DependentUpon>DarkVoyager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Clash.resx">
+      <DependentUpon>Clash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\EliteAgent.resx">
+      <DependentUpon>EliteAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Manic.resx">
+      <DependentUpon>Manic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\PoisedPlaymaker.resx">
+      <DependentUpon>PoisedPlaymaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\RenegadeRaiderC.resx">
+      <DependentUpon>RenegadeRaiderC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\ScarletDefender.resx">
+      <DependentUpon>ScarletDefender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Inferno.resx">
+      <DependentUpon>Inferno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Shadowbird.resx">
+      <DependentUpon>Shadowbird.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\FinesseFinisher.resx">
+      <DependentUpon>FinesseFinisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Whiteout.resx">
+      <DependentUpon>Whiteout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\WorldWarrior.resx">
+      <DependentUpon>WorldWarrior.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Drake.resx">
+      <DependentUpon>Drake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Zadie.resx">
+      <DependentUpon>Zadie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Mezmer.resx">
+      <DependentUpon>Mezmer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Ikonik.resx">
+      <DependentUpon>Ikonik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\SparkleSpecialist.resx">
+      <DependentUpon>SparkleSpecialist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Glow.resx">
+      <DependentUpon>Glow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\EmotesPanel.resx">
+      <DependentUpon>EmotesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\EmoteWarning.resx">
+      <DependentUpon>EmoteWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\AutumnQueen.resx">
+      <DependentUpon>AutumnQueen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Birdie.resx">
+      <DependentUpon>Birdie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Bolt.resx">
+      <DependentUpon>Bolt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Bracer.resx">
+      <DependentUpon>Bracer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\AerialAssault.resx">
+      <DependentUpon>AerialAssault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\BackupVerify.resx">
+      <DependentUpon>BackupVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Loader.resx">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\BypassWarning.resx">
+      <DependentUpon>BypassWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\PakError.resx">
+      <DependentUpon>PakError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\DevMode.resx">
+      <DependentUpon>DevMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\FortniteLaunch.resx">
+      <DependentUpon>FortniteLaunch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\ResetComplete.resx">
+      <DependentUpon>ResetComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\ResetConfirm.resx">
+      <DependentUpon>ResetConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\AdvancedSettings.resx">
+      <DependentUpon>AdvancedSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Doublecross.resx">
+      <DependentUpon>Doublecross.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Heidi.resx">
+      <DependentUpon>Heidi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Hush.resx">
+      <DependentUpon>Hush.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Wonder.resx">
+      <DependentUpon>Wonder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\GhoulOG.resx">
+      <DependentUpon>GhoulOG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\BlackKnight.resx">
+      <DependentUpon>BlackKnight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\RedNosed.resx">
+      <DependentUpon>RedNosed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\RenegadeRaider.resx">
+      <DependentUpon>RenegadeRaider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\StealthReflex.resx">
+      <DependentUpon>StealthReflex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\MiscPanel.resx">
+      <DependentUpon>MiscPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\DashPanel.resx">
+      <DependentUpon>DashPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\BackblingsPanel.resx">
+      <DependentUpon>BackblingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\PickaxesPanel.resx">
+      <DependentUpon>PickaxesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\SkinsPanelScroll.resx">
+      <DependentUpon>SkinsPanelScroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\SkinsPanel.resx">
+      <DependentUpon>SkinsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Sparkplug.resx">
+      <DependentUpon>Sparkplug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Ruby.resx">
+      <DependentUpon>Ruby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\SkullRanger.resx">
+      <DependentUpon>SkullRanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Punchy.resx">
+      <DependentUpon>Punchy.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scenario.wav" />
+    <None Include="Resources\Toosie.wav" />
+    <None Include="Resources\SuperOG.wav" />
+    <Content Include="test_92j_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.6.2.0\build\Fody.targets" Condition="Exists('..\packages\Fody.6.2.0\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.6.2.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.2.0\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props'))" />
+  </Target>
+</Project>

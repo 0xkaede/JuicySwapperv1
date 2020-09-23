@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5CD454B-D8C6-425E-A4A8-7CB05445F043}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JuicyIDSwapper</RootNamespace>
+    <AssemblyName>Juicy ID Swapper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\build\Juicy Swapper\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\build\Juicy Swapper\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>test_92j_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>.\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Costura, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.4.1.0\lib\net40\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscordRPC">
+      <HintPath>.\DiscordRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main\GUI\CustomID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\CustomID.Designer.cs">
+      <DependentUpon>CustomID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\MediaPlayerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\MediaPlayerMenu.Designer.cs">
+      <DependentUpon>MediaPlayerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\MediaPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\MediaPlayer.Designer.cs">
+      <DependentUpon>MediaPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\ItemShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\ItemShop.Designer.cs">
+      <DependentUpon>ItemShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\RogueSpiderShield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\RogueSpiderShield.designer.cs">
+      <DependentUpon>RogueSpiderShield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\RoyaleShield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\RoyaleShield.designer.cs">
+      <DependentUpon>RoyaleShield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\DarkDeflector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\DarkDeflector.designer.cs">
+      <DependentUpon>DarkDeflector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GalacticDisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GalacticDisc.designer.cs">
+      <DependentUpon>GalacticDisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\BackupPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\BackupPlan.designer.cs">
+      <DependentUpon>BackupPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\BlackShield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\BlackShield.designer.cs">
+      <DependentUpon>BlackShield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GhostPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Backblings\GhostPortal.designer.cs">
+      <DependentUpon>GhostPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Levitate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Levitate.designer.cs">
+      <DependentUpon>Levitate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\PonyUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\PonyUp.designer.cs">
+      <DependentUpon>PonyUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\BhangraBoogie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\BhangraBoogie.designer.cs">
+      <DependentUpon>BhangraBoogie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\TheRenegade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\TheRenegade.designer.cs">
+      <DependentUpon>TheRenegade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\TheWorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\TheWorm.designer.cs">
+      <DependentUpon>TheWorm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Scenario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Scenario.designer.cs">
+      <DependentUpon>Scenario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Floss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Emotes\Floss.designer.cs">
+      <DependentUpon>Floss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\AerialAssaultTrooper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\AerialAssaultTrooper.designer.cs">
+      <DependentUpon>AerialAssaultTrooper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\NiteGunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\NiteGunner.designer.cs">
+      <DependentUpon>NiteGunner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\StealthReflex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\StealthReflex.designer.cs">
+      <DependentUpon>StealthReflex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Wonder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Wonder.designer.cs">
+      <DependentUpon>Wonder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\DarkVertex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\DarkVertex.designer.cs">
+      <DependentUpon>DarkVertex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\ShadowArchetype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\ShadowArchetype.designer.cs">
+      <DependentUpon>ShadowArchetype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Glow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Glow.designer.cs">
+      <DependentUpon>Glow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Galaxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Galaxy.designer.cs">
+      <DependentUpon>Galaxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Ikonik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\Ikonik.designer.cs">
+      <DependentUpon>Ikonik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\HonorGuard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\HonorGuard.designer.cs">
+      <DependentUpon>HonorGuard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\SkullTrooper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\SkullTrooper.designer.cs">
+      <DependentUpon>SkullTrooper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\GhoulTrooper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\GhoulTrooper.designer.cs">
+      <DependentUpon>GhoulTrooper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RenegadeRaider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\RenegadeRaider.designer.cs">
+      <DependentUpon>RenegadeRaider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BlackKnight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Item Forms\Skins\BlackKnight.designer.cs">
+      <DependentUpon>BlackKnight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\EmotesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\EmotesPanel.designer.cs">
+      <DependentUpon>EmotesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Juicy.cs" />
+    <Compile Include="Classes\Researcher.cs" />
+    <Compile Include="Classes\Engine.cs" />
+    <Compile Include="Classes\Utilites.cs" />
+    <Compile Include="Main\GUI\BackupVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\BackupVerify.Designer.cs">
+      <DependentUpon>BackupVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Loader.Designer.cs">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\PakError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\PakError.Designer.cs">
+      <DependentUpon>PakError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\DevMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\DevMode.Designer.cs">
+      <DependentUpon>DevMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\FortniteLaunch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\FortniteLaunch.Designer.cs">
+      <DependentUpon>FortniteLaunch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\ResetComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\ResetComplete.Designer.cs">
+      <DependentUpon>ResetComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\ResetConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Messages\ResetConfirm.Designer.cs">
+      <DependentUpon>ResetConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\AdvancedSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\AdvancedSettings.Designer.cs">
+      <DependentUpon>AdvancedSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GUI\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GUI\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\DashPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\DashPanel.Designer.cs">
+      <DependentUpon>DashPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\BackblingsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\BackblingsPanel.Designer.cs">
+      <DependentUpon>BackblingsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\SkinsPanelScroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\SkinsPanelScroll.Designer.cs">
+      <DependentUpon>SkinsPanelScroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\SkinsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\SkinsPanel.Designer.cs">
+      <DependentUpon>SkinsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Main\GUI\CustomID.resx">
+      <DependentUpon>CustomID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\MediaPlayerMenu.resx">
+      <DependentUpon>MediaPlayerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\MediaPlayer.resx">
+      <DependentUpon>MediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\ItemShop.resx">
+      <DependentUpon>ItemShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\RogueSpiderShield.resx">
+      <DependentUpon>RogueSpiderShield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\RoyaleShield.resx">
+      <DependentUpon>RoyaleShield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\DarkDeflector.resx">
+      <DependentUpon>DarkDeflector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\GalacticDisc.resx">
+      <DependentUpon>GalacticDisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\BackupPlan.resx">
+      <DependentUpon>BackupPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\BlackShield.resx">
+      <DependentUpon>BlackShield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Backblings\GhostPortal.resx">
+      <DependentUpon>GhostPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Levitate.resx">
+      <DependentUpon>Levitate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\PonyUp.resx">
+      <DependentUpon>PonyUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\BhangraBoogie.resx">
+      <DependentUpon>BhangraBoogie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\TheRenegade.resx">
+      <DependentUpon>TheRenegade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\TheWorm.resx">
+      <DependentUpon>TheWorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Scenario.resx">
+      <DependentUpon>Scenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Emotes\Floss.resx">
+      <DependentUpon>Floss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\AerialAssaultTrooper.resx">
+      <DependentUpon>AerialAssaultTrooper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\NiteGunner.resx">
+      <DependentUpon>NiteGunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\StealthReflex.resx">
+      <DependentUpon>StealthReflex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Wonder.resx">
+      <DependentUpon>Wonder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\DarkVertex.resx">
+      <DependentUpon>DarkVertex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\ShadowArchetype.resx">
+      <DependentUpon>ShadowArchetype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Glow.resx">
+      <DependentUpon>Glow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Galaxy.resx">
+      <DependentUpon>Galaxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\Ikonik.resx">
+      <DependentUpon>Ikonik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\HonorGuard.resx">
+      <DependentUpon>HonorGuard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\SkullTrooper.resx">
+      <DependentUpon>SkullTrooper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\GhoulTrooper.resx">
+      <DependentUpon>GhoulTrooper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\RenegadeRaider.resx">
+      <DependentUpon>RenegadeRaider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Item Forms\Skins\BlackKnight.resx">
+      <DependentUpon>BlackKnight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\EmotesPanel.resx">
+      <DependentUpon>EmotesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\BackupVerify.resx">
+      <DependentUpon>BackupVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Loader.resx">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\PakError.resx">
+      <DependentUpon>PakError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\DevMode.resx">
+      <DependentUpon>DevMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\FortniteLaunch.resx">
+      <DependentUpon>FortniteLaunch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\ResetComplete.resx">
+      <DependentUpon>ResetComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Messages\ResetConfirm.resx">
+      <DependentUpon>ResetConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\AdvancedSettings.resx">
+      <DependentUpon>AdvancedSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GUI\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\DashPanel.resx">
+      <DependentUpon>DashPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\BackblingsPanel.resx">
+      <DependentUpon>BackblingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\SkinsPanelScroll.resx">
+      <DependentUpon>SkinsPanelScroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\SkinsPanel.resx">
+      <DependentUpon>SkinsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test_92j_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Main\Item Forms\Questions\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.6.2.0\build\Fody.targets" Condition="Exists('..\packages\Fody.6.2.0\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.6.2.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.2.0\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props'))" />
+  </Target>
+</Project>
